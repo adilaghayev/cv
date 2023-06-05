@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adil Aghayev - Portfolio</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3, p {
+            margin: 0 0 15px 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+
+        .tab:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .active {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        #cv-content {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Adil Aghayev</h1>
+        <p>Istanbul, Turkey</p>
+        <p>00 90 535 225 85 37</p>
+        <p>adilaghayev@gmail.com</p>
+        <p><a href="https://github.com/adilaghayev" target="_blank">GitHub</a></p>
+
+        <div id="tabs">
+            <div class="tab active" id="tab-education">Education</div>
+            <div class="tab" id="tab-employment">Employment and Internships</div>
+            <div class="tab" id="tab-skills">Skills</div>
+            <div class="tab" id="tab-extracurricular">Extracurricular Activities</div>
+        </div>
+
+        <div id="cv-content">
+            <!-- Insert CV content here, to be swapped out when tabs are clicked -->
+        </div>
+    </div>
+</body>
+</html>
