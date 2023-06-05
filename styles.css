@@ -37,7 +37,7 @@ label#toggleButton {
     display: block;
     height: 25px;
     width: 50px;
-    background: grey;
+    background: linear-gradient(to right, #4c69a5, grey); /* Gradient */
     position: relative;
     border-radius: 25px;
     cursor: pointer;
@@ -58,7 +58,7 @@ label#toggleButton:before {
 }
 
 input[type="checkbox"]:checked + label#toggleButton {
-    background: #4c69a5;
+    background: linear-gradient(to right, #2B1B3B, #4c69a5); /* Gradient */
 }
 
 input[type="checkbox"]:checked + label#toggleButton:before {
@@ -78,23 +78,29 @@ input[type="checkbox"]:checked + label#toggleButton:before {
     border: 1px solid #333;
     border-radius: 5px;
     transition: background 0.3s ease;
+    background: linear-gradient(to right, #F5E9D3, #ddd); /* Gradient */
 }
 
 .tab:hover {
-    background: #F5E9D3; /* Light beige */
+    filter: brightness(1.2);
 }
 
-body.dark-mode .tab, body.dark-mode .tab:hover {
+body.dark-mode .tab {
     border: 1px solid #E5D0F1; /* Soft purple */
     color: #E5D0F1; /* Soft purple */
+    background: linear-gradient(to right, #4F3379, #2B1B3B); /* Gradient */
+}
+
+body.dark-mode .tab:hover  {
+    filter: brightness(1.2);
 }
 
 .active {
-    background: #ddd;
+    background: linear-gradient(to right, #ddd, #fbda9c); /* Gradient */
 }
 
 body.dark-mode .active {
-    background: #4F3379; /* Darker purple */
+    background: linear-gradient(to right, #2B1B3B, #948ba2); /* Gradient */
 }
 
 /* CV content styling */
@@ -110,7 +116,7 @@ body.dark-mode #cv-content {
 }
 
 .card {
-    background: white;
+    background: linear-gradient(to right, #F5E9D3, white); /* Gradient */
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 15px;
@@ -119,5 +125,5 @@ body.dark-mode #cv-content {
 }
 
 body.dark-mode .card {
-    background: #4F3379; /* Darker purple */
+    background: linear-gradient(to right, #4F3379, #2B1B3B); /* Gradient */
 }
