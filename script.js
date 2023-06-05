@@ -1,5 +1,6 @@
-// Vanilla JS
 window.onload = function () {
+    var checkbox = document.getElementById('switch');
+    var body = document.body;
     var tabs = document.querySelectorAll('.tab');
     var cvSections = document.querySelectorAll('#cv-content > div');
 
@@ -18,27 +19,20 @@ window.onload = function () {
         });
     }
 
-    // initialize page with first tab active
+    checkbox.addEventListener('change', function () {
+        if(checkbox.checked) {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+        } else {
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode');
+        }
+    });
+
+    // Initialize page with first tab active and light mode
     if (tabs.length > 0) {
         tabs[0].click();
     }
+    checkbox.checked = false;
+    body.classList.add('light-mode');
 };
-
-var checkbox = document.querySelector('input[name=mode]');
-
-checkbox.addEventListener('change', function() {
-    if(this.checked) {
-        trans();
-        document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-        trans();
-        document.documentElement.setAttribute('data-theme', 'light');
-    }
-})
-
-let trans = () => {
-    document.documentElement.classList.add('transition');
-    window.setTimeout(() => {
-        document.documentElement.classList.remove('transition')
-    }, 1000)
-}

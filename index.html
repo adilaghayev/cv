@@ -2,142 +2,15 @@
 <html>
 <head>
     <title>Adil Aghayev - Portfolio</title>
-    <style>
-        body {
-            background: linear-gradient(to right, #00c6ff, #0072ff);
-            font-family: Arial, sans-serif;
-            color: white;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1, h2, h3, p {
-            margin: 0 0 15px 0;
-            padding: 0;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        #tabs {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
-
-        .tab {
-            cursor: pointer;
-            padding: 10px;
-            border: 1px solid white;
-            border-radius: 5px;
-        }
-
-        .tab:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .active {
-            background: rgba(255, 255, 255, 0.4);
-        }
-
-        #cv-content {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 5px;
-        }
-        
-        .mode-switch {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-}
-
-body {
-    transition: background-color 0.5s ease;
-}
-
-[data-theme="dark"] {
-    background-color: #1a1a1a;
-    color: white;
-}
-
-.theme-switch-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin: 20px 0;
-}
-
-.theme-switch {
-    display: inline-block;
-    height: 34px;
-    position: relative;
-    width: 60px;
-}
-
-.theme-switch input {
-    display: none;
-}
-
-.slider {
-    background-color: #ccc;
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: .4s;
-}
-
-.slider:before {
-    background-color: #fff;
-    bottom: 4px;
-    content: "";
-    height: 26px;
-    left: 4px;
-    position: absolute;
-    transition: .4s;
-    width: 26px;
-}
-
-input:checked + .slider {
-    background-color: #66bb6a;
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
-}
-
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<script src="script.js"></script>
 <body>
     <div class="container">
-        <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
-                <div class="slider round"></div>
-            </label>
-            <em>Enable Dark Mode!</em>
+        <div class="toggle-container">
+            <input type="checkbox" id="switch" name="theme" />
+            <label id="toggleButton" for="switch">Toggle</label>
         </div>
-        
+
         <h1>Adil Aghayev</h1>
         <p>Istanbul, Turkey</p>
         <p>00 90 535 225 85 37</p>
@@ -150,107 +23,110 @@ input:checked + .slider:before {
             <div class="tab" id="tab-skills">Skills</div>
             <div class="tab" id="tab-extracurricular">Extracurricular Activities</div>
         </div>
-<div id="cv-content">
-    <!-- Insert CV content here, to be swapped out when tabs are clicked -->
+        <div id="cv-content">
+            <!-- Insert CV content here, to be swapped out when tabs are clicked -->
 
-<div id="education">
-        <h2>Education</h2>
-        <h3>Boğaziçi University</h3>
-        <p>2018 - 2020, Software Engineering (Master’s)</p>
-        <ul>
-            <li>Machine and Deep learning</li>
-            <li>QA and test automation</li>
-            <li>Full-stack Django/Python web development</li>
-            <li>Native Android Java development</li>
-            <li>Security and risk assessment</li>
-            <li>General Software Engineering and Computer Science courses</li>
-        </ul>
-        
-        <h3>Middle East Technical University Northern Cyprus Campus (METU NCC)</h3>
-        <p>2011 - 2018, Petroleum and Natural Gas Engineering (Bachelor’s)</p>
-        
-        <h3>The International School Tripoli, Libya</h3>
-        <p>2010 - 2011, A-levels</p>
+            <div id="education">
+                <h2>Education</h2>
+                <h3>Boğaziçi University</h3>
+                <p>2018 - 2020, Software Engineering (Master’s)</p>
+                <ul>
+                    <li>Machine and Deep learning</li>
+                    <li>QA and test automation</li>
+                    <li>Full-stack Django/Python web development</li>
+                    <li>Native Android Java development</li>
+                    <li>Security and risk assessment</li>
+                    <li>General Software Engineering and Computer Science courses</li>
+                </ul>
 
-        <h3>Baku-Oxford School, Azerbaijan</h3>
-        <p>2007 - 2010, IGCSE (best of class, scholarship), A-levels</p>
+                <h3>Middle East Technical University Northern Cyprus Campus (METU NCC)</h3>
+                <p>2011 - 2018, Petroleum and Natural Gas Engineering (Bachelor’s)</p>
 
-        <h3>Gymnasium #160, Baku, Azerbaijan</h3>
-        <p>1999 - 2007, Primary, Middle school (Geography Olympiad Medalist)</p>
+                <h3>The International School Tripoli, Libya</h3>
+                <p>2010 - 2011, A-levels</p>
+
+                <h3>Baku-Oxford School, Azerbaijan</h3>
+                <p>2007 - 2010, IGCSE (best of class, scholarship), A-levels</p>
+
+                <h3>Gymnasium #160, Baku, Azerbaijan</h3>
+                <p>1999 - 2007, Primary, Middle school (Geography Olympiad Medalist)</p>
+            </div>
+            <!-- Employment -->
+            <div id="employment">
+                <h2>Employment and Internships</h2>
+
+                <h3>23 Studios</h3>
+                <p>December, 2021 - Present, Istanbul, Turkey (Full-time)</p>
+                <p>Software Engineer</p>
+                <ul>
+                    <li>Game development</li>
+                    <li>Marketing SDK integration</li>
+                    <li>Analytics SDK integration</li>
+                    <li>Backend API services development</li>
+                    <li>Technologies: C#, .NET, Python, Django</li>
+                </ul>
+
+                <h3>MediaRubic E-learning Solutions</h3>
+                <p>February, 2021 - December, 2021, Istanbul, Turkey (Full-time)</p>
+                <p>Software Engineer</p>
+                <ul>
+                    <li>AR development (AR Core, AR Kit, Unity AR Foundation, Vuforia)</li>
+                    <li>3D Corporate e-learning game development (C#, Unity)</li>
+                    <li>.NET development</li>
+                    <li>Platforms: Windows, Android, iOS, WebGL</li>
+                    <li>Responsible for architecture, project management and version control</li>
+                </ul>
+
+                <h3>Hemisphere Oilfield Technology Services</h3>
+                <p>September, 2018 - December, 2021, Baku, Azerbaijan (Remote part-time)</p>
+                <p>Well log analyst, software engineer</p>
+                <ul>
+                    <li>Data analysis and machine learning</li>
+                    <li>Python’s Keras, TensorFlow, MatPlotLib, etc. libraries</li>
+                    <li>Well log analysis and data interpretation</li>
+                </ul>
+
+                <h3>Private language tutor: English, Russian</h3>
+                <p>September, 2015 - August, 2018</p>
+
+                <h3>GoWell Oilfield Services</h3>
+                <p>2015, Baku, Azerbaijan (Intern)</p>
+                <ul>
+                    <li>Well log interpretation, well logging, equipment calibration, etc.</li>
+                </ul>
+
+                <h3>Absheron Operating Company (AOC)</h3>
+                <p>2013, Baku, Azerbaijan (Intern)</p>
+                <ul>
+                    <li>Drilling engineering</li>
+                </ul>
+            </div>
+
+
+            <div id="skills">
+                <h2>Professional Skills</h2>
+                <ul>
+                    <li>C# advanced level</li>
+                    <li>Unity game engine intermediate level (3D, AR/VR, 2D)</li>
+                    <li>C++ intermediate level</li>
+                    <!-- Add more skills here... -->
+                </ul>
+            </div>
+
+            <div id="extracurricular">
+                <h2>Extracurricular Activities and Accomplishments</h2>
+                <ul>
+                    <li>Honor roll, last year of Bachelor’s</li>
+                    <li>Conducted research on “Multiphase flow patterns in horizontal, vertical and inclined pipes”</li>
+                    <!-- Add more activities here... -->
+                </ul>
+            </div>
+
+
+        </div>
     </div>
-<!-- Employment -->
-<div id="employment">
-    <h2>Employment and Internships</h2>
-    
-    <h3>23 Studios</h3>
-    <p>December, 2021 - Present, Istanbul, Turkey (Full-time)</p>
-    <p>Software Engineer</p>
-    <ul>
-        <li>Game development</li>
-        <li>Marketing SDK integration</li>
-        <li>Analytics SDK integration</li>
-        <li>Backend API services development</li>
-        <li>Technologies: C#, .NET, Python, Django</li>
-    </ul>
 
-    <h3>MediaRubic E-learning Solutions</h3>
-    <p>February, 2021 - December, 2021, Istanbul, Turkey (Full-time)</p>
-    <p>Software Engineer</p>
-    <ul>
-        <li>AR development (AR Core, AR Kit, Unity AR Foundation, Vuforia)</li>
-        <li>3D Corporate e-learning game development (C#, Unity)</li>
-        <li>.NET development</li>
-        <li>Platforms: Windows, Android, iOS, WebGL</li>
-        <li>Responsible for architecture, project management and version control</li>
-    </ul>
-
-    <h3>Hemisphere Oilfield Technology Services</h3>
-    <p>September, 2018 - December, 2021, Baku, Azerbaijan (Remote part-time)</p>
-    <p>Well log analyst, software engineer</p>
-    <ul>
-        <li>Data analysis and machine learning</li>
-        <li>Python’s Keras, TensorFlow, MatPlotLib, etc. libraries</li>
-        <li>Well log analysis and data interpretation</li>
-    </ul>
-
-    <h3>Private language tutor: English, Russian</h3>
-    <p>September, 2015 - August, 2018</p>
-
-    <h3>GoWell Oilfield Services</h3>
-    <p>2015, Baku, Azerbaijan (Intern)</p>
-    <ul>
-        <li>Well log interpretation, well logging, equipment calibration, etc.</li>
-    </ul>
-
-    <h3>Absheron Operating Company (AOC)</h3>
-    <p>2013, Baku, Azerbaijan (Intern)</p>
-    <ul>
-        <li>Drilling engineering</li>
-    </ul>
-</div>
-
-
-    <div id="skills">
-        <h2>Professional Skills</h2>
-        <ul>
-            <li>C# advanced level</li>
-            <li>Unity game engine intermediate level (3D, AR/VR, 2D)</li>
-            <li>C++ intermediate level</li>
-            <!-- Add more skills here... -->
-        </ul>
-    </div>
-
-    <div id="extracurricular">
-        <h2>Extracurricular Activities and Accomplishments</h2>
-        <ul>
-            <li>Honor roll, last year of Bachelor’s</li>
-            <li>Conducted research on “Multiphase flow patterns in horizontal, vertical and inclined pipes”</li>
-            <!-- Add more activities here... -->
-        </ul>
-    </div>
-
-</div>
-
-    </div>
+        <script src="script.js"></script>
 </body>
+
 </html>

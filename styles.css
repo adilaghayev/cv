@@ -1,0 +1,105 @@
+/* Styling for both modes */
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styling specific to each mode */
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+body.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Toggle button styling */
+.toggle-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+input[type="checkbox"]#switch {
+    display: none;
+}
+
+label#toggleButton {
+    display: block;
+    height: 25px;
+    width: 50px;
+    background: grey;
+    position: relative;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+label#toggleButton:before {
+    content: "";
+    display: block;
+    height: 21px;
+    width: 21px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:checked + label#toggleButton {
+    background: #66bb6a;
+}
+
+input[type="checkbox"]:checked + label#toggleButton:before {
+    transform: translatex(24px);
+}
+
+/* Tab button styling */
+#tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.tab:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .tab, body.dark-mode .tab:hover {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.active {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .active {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* CV content styling */
+#cv-content {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+body.dark-mode #cv-content {
+    background: rgba(255, 255, 255, 0.1);
+}
