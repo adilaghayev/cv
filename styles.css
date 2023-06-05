@@ -1,24 +1,26 @@
-/* Styling for both modes */
+/* Common styling */
 body {
     font-family: Arial, sans-serif;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
 }
 
 /* Styling specific to each mode */
 body.light-mode {
-    background-color: #fff;
-    color: #000;
+    background-color: #F5E9D3; /* Updated to a beige tone */
+    color: #333;
 }
 
 body.dark-mode {
-    background-color: #000;
-    color: #fff;
+    background-color: #2B1B3B; /* Updated to a dark purple tone */
+    color: #E5D0F1; /* A softer purple tone for text in dark mode */
 }
 
 /* Toggle button styling */
@@ -39,6 +41,7 @@ label#toggleButton {
     position: relative;
     border-radius: 25px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 label#toggleButton:before {
@@ -55,7 +58,7 @@ label#toggleButton:before {
 }
 
 input[type="checkbox"]:checked + label#toggleButton {
-    background: #66bb6a;
+    background: #4c69a5;
 }
 
 input[type="checkbox"]:checked + label#toggleButton:before {
@@ -72,34 +75,49 @@ input[type="checkbox"]:checked + label#toggleButton:before {
 .tab {
     cursor: pointer;
     padding: 10px;
-    border: 1px solid #000;
+    border: 1px solid #333;
     border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
 .tab:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: #F5E9D3; /* Light beige */
 }
 
 body.dark-mode .tab, body.dark-mode .tab:hover {
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid #E5D0F1; /* Soft purple */
+    color: #E5D0F1; /* Soft purple */
 }
 
 .active {
-    background: rgba(0, 0, 0, 0.4);
+    background: #ddd;
 }
 
 body.dark-mode .active {
-    background: rgba(255, 255, 255, 0.4);
+    background: #4F3379; /* Darker purple */
 }
 
 /* CV content styling */
 #cv-content {
-    background: rgba(0, 0, 0, 0.1);
+    background: #F5E9D3; /* Beige */
     padding: 20px;
     border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
 body.dark-mode #cv-content {
-    background: rgba(255, 255, 255, 0.1);
+    background: #2B1B3B; /* Dark purple */
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+body.dark-mode .card {
+    background: #4F3379; /* Darker purple */
 }
